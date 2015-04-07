@@ -1,0 +1,19 @@
+{
+  "name": "daily-chart",
+  "version": "0.0.0",
+  "homepage": "https://github.com/pedromcunha/ProjectEulerChallenges",
+  "authors": [
+    "pedromcunha <pedro.spinsomewebs@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.3"
+  }
+}
