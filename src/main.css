@@ -1,3 +1,17 @@
+@font-face {
+    font-family: apple;
+    src: url(fonts/AppleGaramond.ttf);
+}
+
+@font-face {
+    font-family: apple-bold;
+    src: url(fonts/AppleGaramond-bold.ttf);
+}
+
+body {
+	font-family: 'apple';
+}
+
 .title {
 	width: 600px;
 	padding-left: 50px;
@@ -9,6 +23,7 @@
 	font-weight: bold;
 	font-size: 16px;
 	margin-right: 25px;
+	font-family: 'apple-bold';
 }
 
 .chart-group {
@@ -17,6 +32,7 @@
 
 h1 {
 	text-align: center;
+	font-family: 'apple-bold';
 }
 
 body {
