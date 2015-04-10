@@ -15,15 +15,27 @@ app.use(bodyParser.urlencoded({
 
 app.use(express.static( path.resolve('src')));
 
+var convertCSV2JSON = function (csv, json) {
+
 var Converter=require("csvtojson").core.Converter;
 
 var csvConverter=new Converter({constructResult:false, toArrayString:true}); // The constructResult parameter=false will turn off final result construction in memory for stream feature. toArrayString will stream out a normal JSON array object.
 
-var readStream=require("fs").createReadStream("test2.csv");
+var readStream=require("fs").createReadStream(csv);
 
-var writeStream=require("fs").createWriteStream("src/outputData2.json");
+var writeStream=require("fs").createWriteStream(json);
 
 readStream.pipe(csvConverter).pipe(writeStream);
+
+};
+
+//convert the csv with the newest data every day (24hrs)
+setInterval(function() {
+	console.log('24hrs have passed, fetching latest CSV');
+	convertCSV2JSON("test.csv", "src/json/outputData.json")
+	convertCSV2JSON("test2.csv", "src/json/outputData2.json")
+}, 86400000);
+
 
 //ROUTE TO ROOT
 app.use(express.static( path.resolve('src')));

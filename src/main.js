@@ -60,7 +60,7 @@ function prepareMultiLineChart(element, json, legend) {
     });
 }
 
-prepareMultiLineChart(NRU, 'outputData.json', 'NRU-legend');
-prepareMultiLineChart(DAU, 'outputData.json', 'DAU-legend');
-prepareMultiLineChart(NRUPP, 'outputData2.json', 'NRUPP-legend');
-prepareMultiLineChart(DAUPP, 'outputData2.json', 'DAUPP-legend');
+prepareMultiLineChart(NRU, 'json/outputData.json', 'NRU-legend');
+prepareMultiLineChart(DAU, 'json/outputData.json', 'DAU-legend');
+prepareMultiLineChart(NRUPP, 'json/outputData2.json', 'NRUPP-legend');
+prepareMultiLineChart(DAUPP, 'json/outputData2.json', 'DAUPP-legend');
