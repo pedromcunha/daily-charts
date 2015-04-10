@@ -28,6 +28,9 @@ var writeStream=require("fs").createWriteStream(json);
 readStream.pipe(csvConverter).pipe(writeStream);
 
 };
+//initial conversion upon server start
+convertCSV2JSON("test.csv", "src/json/outputData.json")
+convertCSV2JSON("test2.csv", "src/json/outputData2.json")
 
 //convert the csv with the newest data every day (24hrs)
 setInterval(function() {
