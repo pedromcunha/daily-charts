@@ -44,7 +44,7 @@ setInterval(function() {
 app.use(express.static( path.resolve('src')));
 
 //===============PORT=================
-var port = process.env.PORT || 1337; //select your port or let it pull from your .env file
+var port = process.env.PORT || 12201; //select your port or let it pull from your .env file
 
 app.listen(port);
 
